@@ -1,9 +1,11 @@
 class Wallet():
+    # создание атрибута класса при инициализации
     def __init__(self, money=0):
         self.deposit = money
 
+    # функция добавляет сумму к депозиту
     def put(self, money):
-        try:
+        try:  # проверка типа входных данных
             if money >= 0:
                 self.deposit += money
             else:
@@ -11,8 +13,9 @@ class Wallet():
         except:
             print("Операция не выполнена")
 
+    # функция вычиате сумму с депозита, если это возмоджно и возращает значение суммы
     def get(self, money):
-        try:
+        try:  # проверка типа входных данных
             if money >= 0:
                 if self.deposit < money:
                     print('Превышен лимит')
@@ -23,6 +26,7 @@ class Wallet():
         except:
             print('Операция не выполнена')
 
+    # функция выводит текующе значение депозита
     def summ(self):
         print(self.deposit)
 

@@ -1,5 +1,5 @@
 class Queue(list):
-    def pop(self):
+    def pop(self):  # переопределяем метод pop
         return super(Queue, self).pop(0)
 
 

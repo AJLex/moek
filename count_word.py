@@ -1,5 +1,6 @@
+# функция считает количество слов в предложении, разделённых пробелом
 def count_word(sentence):
-    if isinstance(sentence, str) is True:
+    if isinstance(sentence, str) is True: #  Проверка типа входных данных
         return len(sentence.split())
     else:
         return 'Не верные данные'
